@@ -36,9 +36,9 @@ const Services = () => {
                 From £32 <span className="text-sm font-normal text-gray-500">per hour</span>
               </p>
               <Link href="/booking">
-                <a className="block text-center bg-primary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition">
+                <div className="block text-center bg-primary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition cursor-pointer">
                   Book Now
-                </a>
+                </div>
               </Link>
             </div>
           </div>
@@ -68,9 +68,9 @@ const Services = () => {
                 From £560 <span className="text-sm font-normal text-gray-500">for 20 hours</span>
               </p>
               <Link href="/booking">
-                <a className="block text-center bg-primary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition">
+                <div className="block text-center bg-primary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition cursor-pointer">
                   Book Now
-                </a>
+                </div>
               </Link>
             </div>
           </div>
