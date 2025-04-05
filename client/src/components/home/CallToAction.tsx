@@ -8,7 +8,7 @@ const CallToAction = () => {
           Ready to Start Your Driving Journey?
         </h2>
         <p className="text-white text-opacity-90 max-w-2xl mx-auto mb-8">
-          Book your driving lesson today and take the first step towards becoming a confident, safe driver.
+          Book your driving lesson today and take the first step towards becoming a confident, test-ready driver.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
           <Link href="/booking">
