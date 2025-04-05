@@ -10,14 +10,14 @@ const CallToAction = () => {
         <p className="text-white text-opacity-90 max-w-2xl mx-auto mb-8">
           Book your driving lesson today and take the first step towards becoming a confident, test-ready driver.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
           <Link href="/booking">
-            <a className="bg-white text-primary px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
+            <a className="inline-block bg-white text-primary px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
               Book a Lesson
             </a>
           </Link>
           <Link href="/contact">
-            <a className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
+            <a className="inline-block border border-white text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
               Contact Me
             </a>
           </Link>
