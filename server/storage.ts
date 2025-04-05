@@ -160,7 +160,7 @@ export class MemStorage implements IStorage {
         date: "September 2023",
         rating: 5,
         content:
-          "I was extremely nervous about learning to drive, but my instructor was so patient and encouraging. I passed my test first time and couldn't be happier with the service!",
+          "I have been through hundreds of driving instructors and I have finally found the right one",
       },
       {
         name: "James Wilson",
