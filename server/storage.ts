@@ -100,21 +100,9 @@ export class MemStorage implements IStorage {
     // Add lesson types
     const lessonTypes = [
       {
-        name: "Beginner Lesson",
-        description: "For new drivers with little to no experience",
+        name: "Standard Lesson",
+        description: "For all experience levels - from beginners to those needing a refresher",
         price: 3200, // £32.00
-        duration: 60, // 1 hour
-      },
-      {
-        name: "Refresher Lesson",
-        description: "For those with some driving experience",
-        price: 3200, // £32.00
-        duration: 60, // 1 hour
-      },
-      {
-        name: "Test Preparation",
-        description: "Focus on test routes and maneuvers",
-        price: 3500, // £35.00
         duration: 60, // 1 hour
       },
       {
@@ -135,12 +123,10 @@ export class MemStorage implements IStorage {
       // Skip Sundays
       if (date.getDay() === 0) continue;
 
-      // Create slots for each day (9am to 5pm)
-      const times = ["09:00", "11:00", "13:00", "15:00"];
-      times.forEach((time) => {
-        const [hours, minutes] = time.split(":").map(Number);
+      // Create slots from 9am to 6pm
+      for (let hour = 9; hour <= 18; hour++) {
         const startTime = new Date(date);
-        startTime.setHours(hours, minutes, 0, 0);
+        startTime.setHours(hour, 0, 0, 0);
 
         const endTime = add(startTime, { hours: 1 });
 
@@ -150,7 +136,7 @@ export class MemStorage implements IStorage {
           endTime,
           isAvailable: true,
         });
-      });
+      }
     }
 
     // Add testimonials
@@ -233,7 +219,21 @@ export class MemStorage implements IStorage {
 
   async getAvailableTimeSlots(date?: Date): Promise<TimeSlot[]> {
     const slots = await this.getTimeSlots(date);
-    return slots.filter((slot) => slot.isAvailable);
+    const availableSlots = slots.filter((slot) => slot.isAvailable);
+
+    // Create a map to store unique slots by hour
+    const uniqueSlots = new Map<number, TimeSlot>();
+    availableSlots.forEach((slot) => {
+      const hour = new Date(slot.startTime).getHours();
+      if (!uniqueSlots.has(hour)) {
+        uniqueSlots.set(hour, slot);
+      }
+    });
+
+    // Convert map values back to array and sort by time
+    return Array.from(uniqueSlots.values()).sort((a, b) => 
+      a.startTime.getTime() - b.startTime.getTime()
+    );
   }
 
   async getTimeSlot(id: number): Promise<TimeSlot | undefined> {

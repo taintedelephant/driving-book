@@ -224,26 +224,12 @@ const LessonsPage = () => {
 // Helper function to get features based on lesson type
 const getFeaturesByLessonType = (typeName: string) => {
   switch (typeName) {
-    case "Beginner Lesson":
+    case "Standard Lesson":
       return [
-        "Car controls & basic maneuvers",
-        "Building confidence in quiet areas",
-        "Foundational driving skills",
+        "Suitable for all experience levels",
+        "Personalized instruction based on your needs",
+        "Building confidence and skills",
         "Understanding road markings and signs"
-      ];
-    case "Refresher Lesson":
-      return [
-        "For drivers with previous experience",
-        "Focus on areas needing improvement",
-        "Building confidence on busier roads",
-        "Refining driving techniques"
-      ];
-    case "Test Preparation":
-      return [
-        "Mock tests with detailed feedback",
-        "Focus on test routes & maneuvers",
-        "Tackling test-day nerves",
-        "Last-minute refinements to technique"
       ];
     case "Intensive Course":
       return [
