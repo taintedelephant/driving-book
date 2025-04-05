@@ -61,19 +61,19 @@ const Header = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-2">
             <Link href="/about">
-              <a className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}>
+              <div className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'} cursor-pointer`}>
                 About Me
-              </a>
+              </div>
             </Link>
             <Link href="/contact">
-              <a className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/contact' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}>
+              <div className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/contact' ? 'bg-gray-100' : 'hover:bg-gray-100'} cursor-pointer`}>
                 Contact
-              </a>
+              </div>
             </Link>
             <Link href="/booking">
-              <a className="bg-secondary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition">
+              <div className="bg-secondary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition cursor-pointer">
                 Book Lessons
-              </a>
+              </div>
             </Link>
           </div>
           
@@ -96,28 +96,28 @@ const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col space-y-1">
               <Link href="/about">
-                <a 
-                  className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+                <div 
+                  className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'} cursor-pointer`}
                   onClick={closeMenu}
                 >
                   About Me
-                </a>
+                </div>
               </Link>
               <Link href="/contact">
-                <a 
-                  className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/contact' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+                <div 
+                  className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/contact' ? 'bg-gray-100' : 'hover:bg-gray-100'} cursor-pointer`}
                   onClick={closeMenu}
                 >
                   Contact
-                </a>
+                </div>
               </Link>
               <Link href="/booking">
-                <a 
-                  className="bg-secondary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition text-center mt-2"
+                <div 
+                  className="bg-secondary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition text-center mt-2 cursor-pointer"
                   onClick={closeMenu}
                 >
                   Book Lessons
-                </a>
+                </div>
               </Link>
             </div>
           </div>

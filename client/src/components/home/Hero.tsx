@@ -7,7 +7,7 @@ const Hero = () => {
       <div 
         className="h-96 md:h-[500px] w-full bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/images/mercedes-c-class.png')" 
+          backgroundImage: "url('https://images.pexels.com/photos/12918442/pexels-photo-12918442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" 
         }}
       ></div>
       <div className="absolute inset-0 flex items-center">
@@ -19,13 +19,13 @@ const Hero = () => {
             <p className="text-gray-600 mb-6">
               Professional, patient instruction to help you become a confident driver.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+            <div className="flex flex-row gap-4">
               <Link href="/booking">
-                <a className="bg-primary text-white px-6 py-3 rounded font-medium text-center hover:bg-opacity-90 transition">
+                <div className="bg-primary text-white px-6 py-2 rounded font-medium text-center hover:bg-opacity-90 transition inline-block cursor-pointer">
                   Book a Lesson
-                </a>
+                </div>
               </Link>
-              <a href="#services" className="bg-white border border-primary text-primary px-6 py-3 rounded font-medium text-center hover:bg-primary hover:text-white transition">
+              <a href="#services" className="bg-white border border-primary text-primary px-6 py-2 rounded font-medium text-center hover:bg-primary hover:text-white transition inline-block">
                 My Services
               </a>
             </div>
