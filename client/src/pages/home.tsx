@@ -13,8 +13,8 @@ const HomePage = () => {
         description="Book professional driving lessons with Calm Driving School. Learn with patient, experienced instructors in a calm and supportive environment."
       />
       <Hero />
-      <AreasCovered />
       <Services />
+      <AreasCovered />
       <Testimonials />
       <CallToAction />
     </>
