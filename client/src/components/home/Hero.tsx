@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <section className="relative">
       <div className="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
-      <div 
+      <div
         className="h-96 md:h-[500px] w-full bg-cover bg-center"
-        style={{ 
-          backgroundImage: "url('/mercedes-c-class-mirrored.png')" 
+        style={{
+          backgroundImage: "url('/mercedes-c-class-mirrored.png')",
         }}
       ></div>
       <div className="absolute inset-0 flex items-center">
@@ -17,7 +17,8 @@ const Hero = () => {
               Start Your Driving Journey Today
             </h1>
             <p className="text-gray-600 mb-6">
-              Professional, patient instruction to help you become a confident driver.
+              Professional, patient instruction to help you become a test-ready
+              driver.
             </p>
             <div className="flex flex-row gap-4">
               <Link href="/booking">
@@ -25,7 +26,10 @@ const Hero = () => {
                   Book a Lesson
                 </div>
               </Link>
-              <a href="#services" className="bg-white border border-primary text-primary px-6 py-2 rounded font-medium text-center hover:bg-primary hover:text-white transition inline-block">
+              <a
+                href="#services"
+                className="bg-white border border-primary text-primary px-6 py-2 rounded font-medium text-center hover:bg-primary hover:text-white transition inline-block"
+              >
                 My Services
               </a>
             </div>
