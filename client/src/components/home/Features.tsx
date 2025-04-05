@@ -1,53 +1,64 @@
-import { Shield, Car, GraduationCap } from "lucide-react";
+import { MapPin } from "lucide-react";
 
-const Features = () => {
+const AreasCovered = () => {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold text-gray-900">Why Choose Me</h2>
+          <h2 className="text-3xl font-heading font-bold text-gray-900">Areas I Cover</h2>
           <p className="mt-2 text-lg text-gray-600">
-            I'm dedicated to helping you become a safe, confident driver
+            Serving students throughout Poole and Parkstone
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-              <Shield className="text-primary text-xl" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 flex items-center md:col-span-1">
+            <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+              <MapPin className="text-primary" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-2">Qualified Instructor</h3>
-            <p className="text-gray-600">
-              As a DVSA approved instructor (ADI) with years of experience, I maintain an excellent pass rate.
-            </p>
+            <div>
+              <h3 className="font-medium">Poole</h3>
+              <p className="text-sm text-gray-600">Including Westbourne and Branksome</p>
+            </div>
           </div>
           
-          {/* Feature 2 */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-              <Car className="text-primary text-xl" />
+          <div className="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 flex items-center md:col-span-1">
+            <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+              <MapPin className="text-primary" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-2">Modern Vehicle</h3>
-            <p className="text-gray-600">
-              Learn in my well-maintained, dual-controlled car equipped with the latest safety features.
-            </p>
+            <div>
+              <h3 className="font-medium">Parkstone</h3>
+              <p className="text-sm text-gray-600">Both Upper and Lower Parkstone areas</p>
+            </div>
           </div>
           
-          {/* Feature 3 */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-              <GraduationCap className="text-primary text-xl" />
+          <div className="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100 flex items-center md:col-span-1">
+            <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+              <MapPin className="text-primary" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-2">Tailored Learning</h3>
-            <p className="text-gray-600">
-              I adapt my teaching methods to suit your individual learning style and help you progress at your own pace.
-            </p>
+            <div>
+              <h3 className="font-medium">Surrounding Areas</h3>
+              <p className="text-sm text-gray-600">Canford Heath, Creekmoor and Oakdale</p>
+            </div>
           </div>
+        </div>
+        
+        <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 aspect-video">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20225.534648909992!2d-1.9852457592959494!3d50.72029008551104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a1c718dcb013%3A0x4930578204eb3733!2sPoole%2C%20UK!5e0!3m2!1sen!2sus!4v1713859939978!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Map of Poole and Parkstone area"
+            className="w-full h-full"
+          ></iframe>
         </div>
       </div>
     </section>
   );
 };
 
-export default Features;
+export default AreasCovered;
