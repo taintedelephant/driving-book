@@ -1,10 +1,7 @@
 import { Link } from "wouter";
 import { 
-  MapPin, 
-  Phone, 
   Mail,
   Facebook, 
-  Twitter, 
   Instagram 
 } from "lucide-react";
 
@@ -12,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Column 1: About */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4">About Calm Driving</h3>
@@ -30,15 +27,6 @@ const Footer = () => {
                 <Facebook size={18} />
               </a>
               <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -50,49 +38,10 @@ const Footer = () => {
             </div>
           </div>
           
-
-          {/* Column 2: Useful Links */}
-          <div>
-            <h3 className="text-lg font-heading font-semibold mb-4">Useful Links</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link href="/booking">
-                  <a className="hover:text-white transition">Book a Lesson</a>
-                </Link>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-white transition">Pricing & Packages</a>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a className="hover:text-white transition">FAQs</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a className="hover:text-white transition">Testimonials</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a className="hover:text-white transition">Contact Me</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Column 3: Contact */}
+          {/* Column 2: Contact */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4">Contact Me</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="flex items-start">
-                <MapPin className="h-4 w-4 mt-1 mr-3 text-primary" />
-                <span>123 Driving Avenue, Anytown, AN1 2BC</span>
-              </li>
-              <li className="flex items-start">
-                <Phone className="h-4 w-4 mt-1 mr-3 text-primary" />
-                <span>07123 456789</span>
-              </li>
               <li className="flex items-start">
                 <Mail className="h-4 w-4 mt-1 mr-3 text-primary" />
                 <span>info@calmdriving.co.uk</span>
@@ -109,15 +58,6 @@ const Footer = () => {
                 <span>Message me on WhatsApp</span>
               </li>
             </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Calm Driving Instructor. All rights reserved.</p>
-          <div className="flex justify-center space-x-4 mt-2">
-            <a href="#" className="hover:text-gray-400 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-400 transition">Terms of Service</a>
-            <a href="#" className="hover:text-gray-400 transition">Cookie Policy</a>
           </div>
         </div>
       </div>
