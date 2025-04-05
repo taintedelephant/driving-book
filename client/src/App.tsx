@@ -7,7 +7,6 @@ import Footer from "@/components/layout/Footer";
 
 import HomePage from "@/pages/home";
 import AboutPage from "@/pages/about";
-import LessonsPage from "@/pages/lessons";
 import ContactPage from "@/pages/contact";
 import BookingPage from "@/pages/booking";
 import AdminPage from "@/pages/admin";
@@ -22,7 +21,6 @@ function App() {
           <Switch>
             <Route path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
-            <Route path="/lessons" component={LessonsPage} />
             <Route path="/contact" component={ContactPage} />
             <Route path="/booking" component={BookingPage} />
             <Route path="/admin" component={AdminPage} />

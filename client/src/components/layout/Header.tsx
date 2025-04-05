@@ -60,11 +60,6 @@ const Header = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-2">
-            <Link href="/lessons">
-              <a className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/lessons' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}>
-                Driving Lessons
-              </a>
-            </Link>
             <Link href="/about">
               <a className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}>
                 About Me
@@ -100,14 +95,6 @@ const Header = () => {
         <div className="md:hidden bg-white border-t border-gray-200 py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col space-y-1">
-              <Link href="/lessons">
-                <a 
-                  className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/lessons' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
-                  onClick={closeMenu}
-                >
-                  Driving Lessons
-                </a>
-              </Link>
               <Link href="/about">
                 <a 
                   className={`px-3 py-2 rounded text-sm font-medium transition ${location === '/about' ? 'bg-gray-100' : 'hover:bg-gray-100'}`}

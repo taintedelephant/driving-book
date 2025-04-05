@@ -55,29 +55,19 @@ const Footer = () => {
             <h3 className="text-lg font-heading font-semibold mb-4">Driving Lessons</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Beginner Lessons</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Beginner Lessons</a>
               </li>
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Refresher Courses</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Refresher Courses</a>
               </li>
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Intensive Courses</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Intensive Courses</a>
               </li>
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Test Preparation</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Test Preparation</a>
               </li>
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Pass Plus</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Pass Plus</a>
               </li>
             </ul>
           </div>
@@ -92,9 +82,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/lessons">
-                  <a className="hover:text-white transition">Pricing & Packages</a>
-                </Link>
+                <a href="/#services" className="hover:text-white transition">Pricing & Packages</a>
               </li>
               <li>
                 <Link href="/about">

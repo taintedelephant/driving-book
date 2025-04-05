@@ -7,7 +7,7 @@ const Hero = () => {
       <div 
         className="h-96 md:h-[500px] w-full bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')" 
+          backgroundImage: "url('/images/mercedes-c-class.png')" 
         }}
       ></div>
       <div className="absolute inset-0 flex items-center">
@@ -25,11 +25,9 @@ const Hero = () => {
                   Book a Lesson
                 </a>
               </Link>
-              <Link href="/lessons">
-                <a className="bg-white border border-primary text-primary px-6 py-3 rounded font-medium text-center hover:bg-primary hover:text-white transition">
-                  My Services
-                </a>
-              </Link>
+              <a href="#services" className="bg-white border border-primary text-primary px-6 py-3 rounded font-medium text-center hover:bg-primary hover:text-white transition">
+                My Services
+              </a>
             </div>
           </div>
         </div>
