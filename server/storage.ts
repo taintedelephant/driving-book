@@ -123,7 +123,7 @@ export class MemStorage implements IStorage {
       // Skip Sundays
       if (date.getDay() === 0) continue;
 
-      // Create slots from 9am to 6pm
+      // Create slots from 9am to 6pm (last lesson starts at 6pm)
       for (let hour = 9; hour <= 18; hour++) {
         const startTime = new Date(date);
         startTime.setHours(hour, 0, 0, 0);
@@ -230,10 +230,9 @@ export class MemStorage implements IStorage {
       }
     });
 
-    // Convert map values back to array and sort by time
-    return Array.from(uniqueSlots.values()).sort((a, b) => 
-      a.startTime.getTime() - b.startTime.getTime()
-    );
+    // Convert map values back to array and sort by hour
+    return Array.from(uniqueSlots.values())
+      .sort((a, b) => new Date(a.startTime).getHours() - new Date(b.startTime).getHours());
   }
 
   async getTimeSlot(id: number): Promise<TimeSlot | undefined> {

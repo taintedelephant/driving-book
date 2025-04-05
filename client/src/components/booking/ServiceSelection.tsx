@@ -31,11 +31,21 @@ const ServiceSelection = ({ onNext }: ServiceSelectionProps) => {
 
   const handleContinue = () => {
     if (selectedService) {
+      // Calculate price based on duration
+      let finalPrice = selectedService.price;
+      if (selectedService.name !== "Intensive Course") {
+        if (selectedDuration === "1.5 hours") {
+          finalPrice = Math.floor(selectedService.price * 1.5);
+        } else if (selectedDuration === "2 hours") {
+          finalPrice = selectedService.price * 2;
+        }
+      }
+
       onNext({
         lessonTypeId: selectedService.id,
         lessonTypeName: selectedService.name,
         duration: selectedDuration,
-        price: selectedService.price,
+        price: finalPrice,
       });
     }
   };
