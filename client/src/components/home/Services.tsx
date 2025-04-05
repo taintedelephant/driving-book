@@ -44,8 +44,7 @@ const Services = () => {
           </div>
           
           {/* Service 2 */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 relative z-10">
-            <div className="bg-primary text-white text-center text-sm py-1">Most Popular</div>
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100">
             <div className="p-6">
               <h3 className="text-xl font-heading font-semibold mb-2">Intensive Course</h3>
               <p className="text-gray-600 mb-4">
@@ -69,7 +68,7 @@ const Services = () => {
                 From £560 <span className="text-sm font-normal text-gray-500">for 20 hours</span>
               </p>
               <Link href="/booking">
-                <a className="block text-center bg-secondary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition">
+                <a className="block text-center bg-primary text-white px-4 py-2 rounded font-medium hover:bg-opacity-90 transition">
                   Book Now
                 </a>
               </Link>

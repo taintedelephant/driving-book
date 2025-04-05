@@ -55,9 +55,7 @@ const Header = () => {
             <Link href="/" className="flex items-end">
               <span className="text-3xl font-heading font-bold text-primary">Calm</span>
               <span className="text-2xl font-heading font-medium ml-1">Driving</span>
-              <span className="bg-primary text-white text-xs px-1 py-0.5 ml-1 rounded-sm">Instructor</span>
             </Link>
-            <p className="text-xs text-gray-500 ml-2 hidden sm:block">calm · caring · confident</p>
           </div>
           
           {/* Desktop Menu */}
