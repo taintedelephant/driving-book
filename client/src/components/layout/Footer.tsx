@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Column 1: About */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4">About Calm Driving</h3>
@@ -50,29 +50,8 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2: Driving Lessons */}
-          <div>
-            <h3 className="text-lg font-heading font-semibold mb-4">Driving Lessons</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <a href="/#services" className="hover:text-white transition">Beginner Lessons</a>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-white transition">Refresher Courses</a>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-white transition">Intensive Courses</a>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-white transition">Test Preparation</a>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-white transition">Pass Plus</a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Column 3: Useful Links */}
+
+          {/* Column 2: Useful Links */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
@@ -102,7 +81,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Column 4: Contact */}
+          {/* Column 3: Contact */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4">Contact Me</h3>
             <ul className="space-y-2 text-sm text-gray-400">
