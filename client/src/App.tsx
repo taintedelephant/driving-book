@@ -8,7 +8,6 @@ import Footer from "@/components/layout/Footer";
 import HomePage from "@/pages/home";
 import AboutPage from "@/pages/about";
 import LessonsPage from "@/pages/lessons";
-import BecomeInstructorPage from "@/pages/become-instructor";
 import ContactPage from "@/pages/contact";
 import BookingPage from "@/pages/booking";
 import AdminPage from "@/pages/admin";
@@ -24,7 +23,6 @@ function App() {
             <Route path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/lessons" component={LessonsPage} />
-            <Route path="/become-instructor" component={BecomeInstructorPage} />
             <Route path="/contact" component={ContactPage} />
             <Route path="/booking" component={BookingPage} />
             <Route path="/admin" component={AdminPage} />

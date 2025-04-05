@@ -27,7 +27,7 @@ const Hero = () => {
               </Link>
               <Link href="/lessons">
                 <a className="bg-white border border-primary text-primary px-6 py-3 rounded font-medium text-center hover:bg-primary hover:text-white transition">
-                  Our Services
+                  My Services
                 </a>
               </Link>
             </div>

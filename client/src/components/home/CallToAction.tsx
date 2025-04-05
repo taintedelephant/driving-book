@@ -18,7 +18,7 @@ const CallToAction = () => {
           </Link>
           <Link href="/contact">
             <a className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
-              Contact Us
+              Contact Me
             </a>
           </Link>
         </div>
