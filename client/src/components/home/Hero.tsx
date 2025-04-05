@@ -12,7 +12,7 @@ const Hero = () => {
       ></div>
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-lg bg-white bg-opacity-35 p-6 md:p-8 rounded-lg shadow-lg">
+          <div className="max-w-lg bg-white bg-opacity-60 p-6 md:p-8 rounded-lg shadow-lg">
             <h1 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
               Start Your Driving Journey Today
             </h1>
