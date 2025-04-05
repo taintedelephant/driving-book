@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: driving-book
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: driving-book-db
+          property: connectionString
+
+databases:
+  - name: driving-book-db
+    plan: free
+    ipAllowList: [] 
