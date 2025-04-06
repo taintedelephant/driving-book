@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
+import logo from "@/assets/images/driving-logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,10 +52,13 @@ const Header = () => {
         {/* Main Navigation */}
         <nav className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-end">
-            <Link href="/" className="flex items-end">
-              <span className="text-3xl font-heading font-bold text-primary">Carla's</span>
-              <span className="text-2xl font-heading font-medium ml-1">Driving School</span>
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Carla's Driving School Logo" 
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
           
