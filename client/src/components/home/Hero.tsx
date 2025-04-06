@@ -7,7 +7,7 @@ const Hero = () => {
       <div
         className="h-96 md:h-[600px] w-full bg-cover bg-center"
         style={{
-          backgroundImage: "url('/mercedes-c-class-mirrored.png')",
+          backgroundImage: "url('/images/mercedes-c-class.jpg')",
         }}
       ></div>
       <div className="absolute inset-0 flex items-center">

@@ -12,14 +12,14 @@ const CallToAction = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
           <Link href="/booking">
-            <a className="inline-block bg-white text-primary px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
+            <div className="inline-block bg-white text-primary px-8 py-3 rounded font-medium hover:bg-opacity-90 transition cursor-pointer">
               Book a Lesson
-            </a>
+            </div>
           </Link>
           <Link href="/contact">
-            <a className="inline-block border border-white text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition">
+            <div className="inline-block border border-white text-white px-8 py-3 rounded font-medium hover:bg-opacity-90 transition cursor-pointer">
               Contact Me
-            </a>
+            </div>
           </Link>
         </div>
       </div>
