@@ -10,9 +10,9 @@ const Hero = () => {
           backgroundImage: "url('/images/mercedes-c-class.jpg')",
         }}
       ></div>
-      <div className="absolute inset-0 flex items-center">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-          <div className="w-[70%] sm:w-auto max-w-lg bg-white bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg">
+      <div className="absolute inset-0 flex md:items-center">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-full flex items-end md:items-center pb-8 md:pb-0">
+          <div className="w-[70%] sm:w-auto max-w-lg bg-white bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg mb-4 md:mb-0">
             <h1 className="text-2xl md:text-4xl font-heading font-bold mb-4 md:mb-6 text-primary">
               Start Your Driving Journey Today
             </h1>
