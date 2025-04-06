@@ -7,7 +7,6 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-heading font-bold text-gray-900">Driving Lessons</h2>
-          <p className="mt-2 text-lg text-gray-600">Choose the right package for your needs</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
