@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const texts = [
-    "Driving lessons in Poole and Bournemouth",
+    "Driving lessons in Poole & Parkstone",
     "Intensive courses to fast track your abilities",
     "Friendly and relaxed driving lessons"
   ];
