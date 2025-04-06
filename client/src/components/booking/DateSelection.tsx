@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { TimeSlot } from "@shared/schema";
 
 interface DateSelectionProps {
   onNext: (data: {
@@ -18,9 +19,9 @@ interface DateSelectionProps {
 
 const DateSelection = ({ onNext, onBack }: DateSelectionProps) => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState<any>(null);
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState<TimeSlot | null>(null);
 
-  const { data: timeSlots, isLoading, refetch } = useQuery({
+  const { data: timeSlots, isLoading, refetch } = useQuery<TimeSlot[]>({
     queryKey: ['/api/time-slots', selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null],
     enabled: !!selectedDate,
   });
@@ -48,7 +49,7 @@ const DateSelection = ({ onNext, onBack }: DateSelectionProps) => {
     }
   };
 
-  const availableSlots = timeSlots?.filter((slot: any) => slot.isAvailable) || [];
+  const availableSlots = timeSlots?.filter((slot) => slot.isAvailable) || [];
   const hasSlots = availableSlots.length > 0;
 
   return (
@@ -91,16 +92,20 @@ const DateSelection = ({ onNext, onBack }: DateSelectionProps) => {
             </div>
           ) : selectedDate ? (
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-2">
-              {availableSlots.map((slot: any) => (
-                <Button
-                  key={slot.id}
-                  variant={selectedTimeSlot?.id === slot.id ? "default" : "outline"}
-                  onClick={() => setSelectedTimeSlot(slot)}
-                  className="justify-center"
-                >
-                  {format(new Date(slot.startTime), 'h:mm a')}
-                </Button>
-              ))}
+              {availableSlots.map((slot) => {
+                // Convert UTC time to local time for display
+                const localTime = new Date(slot.startTime);
+                return (
+                  <Button
+                    key={slot.id}
+                    variant={selectedTimeSlot?.id === slot.id ? "default" : "outline"}
+                    onClick={() => setSelectedTimeSlot(slot)}
+                    className="justify-center"
+                  >
+                    {format(localTime, 'h:mm a')}
+                  </Button>
+                );
+              })}
             </div>
           ) : (
             <div className="bg-gray-50 p-4 rounded-md border border-gray-200 text-center">

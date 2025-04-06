@@ -20,6 +20,7 @@ import {
   isWithinInterval,
   parseISO,
 } from "date-fns";
+import { zonedTimeToUtc, utcToZonedTime } from 'date-fns-tz';
 
 export interface IStorage {
   // User operations
@@ -126,16 +127,17 @@ export class MemStorage implements IStorage {
       // Create slots from 9am to 6pm (last lesson starts at 6pm)
       for (let hour = 9; hour <= 18; hour++) {
         const startTime = new Date(date);
-        startTime.setHours(hour, 0, 0, 0);
-
+        startTime.setUTCHours(hour, 0, 0, 0);
         const endTime = add(startTime, { hours: 1 });
 
-        this.createTimeSlot({
+        const timeSlot = {
           date: startTime,
           startTime,
           endTime,
           isAvailable: true,
-        });
+        } as InsertTimeSlot;
+
+        this.createTimeSlot(timeSlot);
       }
     }
 
