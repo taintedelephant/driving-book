@@ -75,7 +75,7 @@ const Header = () => {
               </div>
             </Link>
             <Link href="/booking">
-              <div className="bg-secondary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition cursor-pointer">
+              <div className="bg-primary text-white px-4 py-2 rounded text-sm font-medium hover:bg-opacity-90 transition cursor-pointer">
                 Book Lessons
               </div>
             </Link>
